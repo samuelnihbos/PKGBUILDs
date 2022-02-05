@@ -1,0 +1,4 @@
+#+TITLE: PKBUILDs
+#+AUTHOR: SamuelNihBos
+
+Here's you can find all PKGBUILDs for all packages in my [[https://gitlab.com/samuelnihbos/samuel-arch-repo][3rd party repo]]

@@ -1,13 +1,13 @@
 # Maintainer: SamuelNihBos <samuelnihbos@disroot.org>
-pkgname=st-samuel-git
-pkgver=0.8.4.r12.11269e6
+pkgname=st-everblush-git
+pkgver=0.8.4.r4.2221eb1
 pkgrel=1
 pkgdesc="A patched and customized build of st"
 arch=(x86_64)
-url="https://gitlab.com/samuelnihbos/st-samuel.git"
+url="https://github.com/samuelnihbos/st-everblush.git"
 license=('MIT')
 groups=()
-depends=(ttf-hack ttf-joypixels)
+depends=(ttf-hack ttf-joypixels ttf-iosevka-nerd)
 makedepends=(git)
 checkdepends=()
 optdepends=()
@@ -27,12 +27,12 @@ pkgver() {
 }
 
 build() {
-  cd st-samuel
+  cd st-everblush
   make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
 }
 
 package() {
-  cd st-samuel  
+  cd st-everblush  
   mkdir -p ${pkgdir}/opt/${pkgname}
   cp -rf * ${pkgdir}/opt/${pkgname}
   make PREFIX=/usr DESTDIR="${pkgdir}" install

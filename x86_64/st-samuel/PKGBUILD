@@ -1,13 +1,13 @@
 # Maintainer: SamuelNihBos <samuelnihbos@disroot.org>
-pkgname=st-uwu-git
-pkgver=0.8.4.r32.835d7b3
+pkgname=st-samuel-git
+pkgver=0.8.4.r4.2221eb1
 pkgrel=1
 pkgdesc="A patched and customized build of st"
 arch=(x86_64)
-url="https://github.com/samuelnihbos/st-uwu.git"
+url="https://github.com/samuelnihbos/st-samuel.git"
 license=('MIT')
 groups=()
-depends=(ttf-hack ttf-joypixels ttf-iosevka-nerd)
+depends=(ttf-hack ttf-joypixels)
 makedepends=(git)
 checkdepends=()
 optdepends=()
@@ -27,12 +27,12 @@ pkgver() {
 }
 
 build() {
-  cd st-uwu
+  cd st-samuel
   make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
 }
 
 package() {
-  cd st-uwu  
+  cd st-samuel  
   mkdir -p ${pkgdir}/opt/${pkgname}
   cp -rf * ${pkgdir}/opt/${pkgname}
   make PREFIX=/usr DESTDIR="${pkgdir}" install

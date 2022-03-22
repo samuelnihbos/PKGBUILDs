@@ -1,6 +1,6 @@
 # Maintainer: SamuelNihBos <samuelnihbos@disroot.org>
 pkgname=st-everblush-git
-pkgver=0.8.4.r4.2221eb1
+pkgver=0.8.4.r5.82e026a
 pkgrel=1
 pkgdesc="A patched and customized build of st"
 arch=(x86_64)
